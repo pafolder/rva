@@ -37,7 +37,7 @@ class AdminControllerTest extends AbstractControllerTest {
         Assertions.assertTrue(mockMvc.perform(MockMvcRequestBuilders.post(AdminMenuController.REST_URL)
                         .contentType(MediaType.APPLICATION_JSON)
                         .with(SecurityMockMvcRequestPostProcessors.httpBasic(admin.getEmail(), admin.getPassword()))
-                        .content("{\"restaurantId\":" + RESTAURANT_ID_TO_CREATE_STRING + ",\"menuDate\":\"" +
+                        .content("{\"restaurantId\":" + RESTAURANT_ID_TO_CREATE_STRING + "," + "\"menuDate\":\"" +
                                 LocalDate.now() +
                                 "\",\"menuItems\":[{\"dishName\":\"Beef\",\"dishPrice\":488.45}," +
                                 "{\"dishName\":\"Garnish\",\"dishPrice\":132.80}]}"))
